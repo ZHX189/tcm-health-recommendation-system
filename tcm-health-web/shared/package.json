@@ -1,0 +1,23 @@
+{
+  "name": "shared",
+  "version": "1.0.0",
+  "private": true,
+  "description": "共享模块 - API、组件、工具函数、常量",
+  "main": "index.js",
+  "exports": {
+    "./api": "./api/index.js",
+    "./api/*": "./api/*.js",
+    "./utils": "./utils/index.js",
+    "./utils/*": "./utils/*.js",
+    "./constants": "./constants/index.js",
+    "./components": "./components/index.js",
+    "./components/*": "./components/*.vue",
+    "./styles": "./styles/index.css",
+    "./styles/*": "./styles/*.css"
+  },
+  "dependencies": {
+    "axios": "^1.6.5",
+    "element-plus": "^2.5.3",
+    "vue": "^3.4.15"
+  }
+}

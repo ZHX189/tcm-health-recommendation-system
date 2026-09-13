@@ -1,0 +1,29 @@
+==================== 中医养生平台 - 前端启动说明 ====================
+
+【首次启动 - 安装依赖】
+cd tcm-health/tcm-health-web
+npm install -g pnpm
+pnpm install
+
+【启动项目】
+pnpm dev:admin    # 管理员端 (端口 3000)
+pnpm dev:user     # 用户端   (端口 3001)
+pnpm dev:staff    # 员工端   (端口 3002)
+
+【打包构建】
+pnpm build:admin  # 打包管理员端
+pnpm build:user   # 打包用户端
+pnpm build:staff  # 打包员工端
+pnpm build:all    # 打包全部
+
+【注意事项】
+1. 必须在 tcm-health-web 根目录下执行命令
+2. 需要先安装 pnpm（npm install -g pnpm）
+3. 首次运行需执行 pnpm install 安装依赖
+4. 后端服务端口：用户端8080、管理端8081、员工端8082
+
+用户端：http://localhost:3001/login
+
+员工端：http://localhost:3002/login
+
+管理端：http://localhost:3003/login

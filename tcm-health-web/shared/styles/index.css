@@ -1,0 +1,413 @@
+/**
+ * 中医养生平台 - 全局样式
+ * @author Ti
+ * @since 2026-02-03
+ */
+
+@import './variables.css';
+
+/* ==================== 全局重置 ==================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--tcm-font-body);
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--tcm-text-regular);
+  background-color: var(--tcm-bg-cream);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ==================== 标题样式 - 宋体 ==================== */
+
+h1, h2, h3, h4, h5, h6,
+.tcm-title {
+  font-family: var(--tcm-font-title);
+  color: var(--tcm-text-primary);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+h1 { font-size: 28px; }
+h2 { font-size: 24px; }
+h3 { font-size: 20px; }
+h4 { font-size: 18px; }
+h5 { font-size: 16px; }
+h6 { font-size: 14px; }
+
+/* ==================== 链接样式 ==================== */
+
+a {
+  color: var(--tcm-ochre);
+  text-decoration: none;
+  transition: color var(--tcm-transition-fast);
+}
+
+a:hover {
+  color: var(--tcm-ochre-light);
+}
+
+/* ==================== 滚动条样式 ==================== */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--tcm-bg-paper-dark);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--tcm-border-dark);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--tcm-ochre-light);
+}
+
+/* ==================== 传统纹样装饰 ==================== */
+
+/* 云纹边框装饰 */
+.tcm-cloud-border {
+  position: relative;
+}
+
+.tcm-cloud-border::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    var(--tcm-ochre-100) 10%, 
+    var(--tcm-turmeric-100) 50%, 
+    var(--tcm-ochre-100) 90%, 
+    transparent 100%
+  );
+}
+
+/* 印章装饰 */
+.tcm-seal {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 8px;
+  background: var(--tcm-vermilion);
+  color: #FFFEF5;
+  font-family: var(--tcm-font-title);
+  font-size: 12px;
+  border-radius: 2px;
+  transform: rotate(-3deg);
+}
+
+/* ==================== 卡片样式 ==================== */
+
+.tcm-card {
+  background: var(--tcm-bg-paper);
+  border: 1px solid var(--tcm-border-light);
+  border-radius: var(--tcm-radius-md);
+  box-shadow: var(--tcm-shadow-base);
+  transition: box-shadow var(--tcm-transition-base);
+}
+
+.tcm-card:hover {
+  box-shadow: var(--tcm-shadow-md);
+}
+
+.tcm-card-header {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--tcm-border-lighter);
+  font-family: var(--tcm-font-title);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--tcm-text-primary);
+}
+
+.tcm-card-body {
+  padding: 20px;
+}
+
+/* ==================== 按钮样式增强 ==================== */
+
+.el-button {
+  font-family: var(--tcm-font-body);
+}
+
+.el-button--primary {
+  background-color: var(--tcm-ochre);
+  border-color: var(--tcm-ochre);
+}
+
+.el-button--primary:hover,
+.el-button--primary:focus {
+  background-color: var(--tcm-ochre-light);
+  border-color: var(--tcm-ochre-light);
+}
+
+.el-button--success {
+  background-color: var(--tcm-jade);
+  border-color: var(--tcm-jade);
+}
+
+.el-button--warning {
+  background-color: var(--tcm-amber);
+  border-color: var(--tcm-amber);
+}
+
+.el-button--danger {
+  background-color: var(--tcm-vermilion);
+  border-color: var(--tcm-vermilion);
+}
+
+/* 带图标按钮样式 */
+.tcm-btn-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.tcm-btn-icon .tcm-icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* ==================== 表格样式 ==================== */
+
+.el-table {
+  --el-table-border-color: var(--tcm-border-light);
+  --el-table-header-bg-color: var(--tcm-bg-paper-dark);
+  --el-table-header-text-color: var(--tcm-text-primary);
+  --el-table-row-hover-bg-color: var(--tcm-ochre-50);
+}
+
+.el-table th.el-table__cell {
+  font-family: var(--tcm-font-title);
+  font-weight: 600;
+}
+
+/* ==================== 表单样式 ==================== */
+
+.el-input__wrapper,
+.el-textarea__inner,
+.el-select .el-input__wrapper {
+  background-color: var(--tcm-bg-paper);
+  border-color: var(--tcm-border-base);
+}
+
+.el-input__wrapper:hover,
+.el-textarea__inner:hover,
+.el-select .el-input__wrapper:hover {
+  border-color: var(--tcm-ochre-light);
+}
+
+.el-input__wrapper.is-focus,
+.el-textarea__inner:focus,
+.el-select .el-input.is-focus .el-input__wrapper {
+  border-color: var(--tcm-ochre);
+  box-shadow: 0 0 0 1px var(--tcm-ochre-100);
+}
+
+/* ==================== 分页组件中文居中样式 ==================== */
+
+.tcm-pagination {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.el-pagination {
+  --el-pagination-hover-color: var(--tcm-ochre);
+  --el-pagination-bg-color: var(--tcm-bg-paper);
+}
+
+.el-pagination .el-pagination__sizes {
+  margin-right: 16px;
+}
+
+.el-pagination .el-pagination__jump {
+  margin-left: 16px;
+}
+
+/* ==================== 面包屑样式 ==================== */
+
+.tcm-breadcrumb {
+  padding: 12px 0;
+  margin-bottom: 16px;
+}
+
+.el-breadcrumb__inner a,
+.el-breadcrumb__inner.is-link {
+  color: var(--tcm-ochre);
+  font-weight: 400;
+}
+
+.el-breadcrumb__inner a:hover,
+.el-breadcrumb__inner.is-link:hover {
+  color: var(--tcm-ochre-light);
+}
+
+/* ==================== 对话框样式 ==================== */
+
+.el-dialog {
+  --el-dialog-bg-color: var(--tcm-bg-paper);
+  border-radius: var(--tcm-radius-lg);
+}
+
+.el-dialog__header {
+  border-bottom: 1px solid var(--tcm-border-lighter);
+  padding-bottom: 16px;
+}
+
+.el-dialog__title {
+  font-family: var(--tcm-font-title);
+  font-weight: 600;
+  color: var(--tcm-text-primary);
+}
+
+/* ==================== 标签样式 ==================== */
+
+.el-tag {
+  border-radius: 2px;
+}
+
+.el-tag--success {
+  background-color: rgba(46, 139, 87, 0.1);
+  border-color: rgba(46, 139, 87, 0.2);
+  color: var(--tcm-jade);
+}
+
+.el-tag--warning {
+  background-color: rgba(255, 185, 15, 0.1);
+  border-color: rgba(255, 185, 15, 0.2);
+  color: var(--tcm-amber);
+}
+
+.el-tag--danger {
+  background-color: rgba(209, 72, 54, 0.1);
+  border-color: rgba(209, 72, 54, 0.2);
+  color: var(--tcm-vermilion);
+}
+
+.el-tag--info {
+  background-color: rgba(47, 79, 79, 0.1);
+  border-color: rgba(47, 79, 79, 0.2);
+  color: var(--tcm-ink-cyan);
+}
+
+/* ==================== 菜单样式 ==================== */
+
+.el-menu {
+  --el-menu-bg-color: var(--tcm-bg-paper);
+  --el-menu-hover-bg-color: var(--tcm-ochre-50);
+  --el-menu-active-color: var(--tcm-ochre);
+  --el-menu-text-color: var(--tcm-text-regular);
+}
+
+.el-menu-item.is-active {
+  background-color: var(--tcm-ochre-100);
+  border-right: 3px solid var(--tcm-ochre);
+}
+
+/* ==================== 消息提示样式 ==================== */
+
+.el-message {
+  --el-message-bg-color: var(--tcm-bg-paper);
+  border-color: var(--tcm-border-light);
+}
+
+/* ==================== 动画效果 ==================== */
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity var(--tcm-transition-base);
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.slide-fade-enter-active {
+  transition: all var(--tcm-transition-base);
+}
+
+.slide-fade-leave-active {
+  transition: all var(--tcm-transition-fast);
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translateY(-10px);
+  opacity: 0;
+}
+
+/* ==================== 水墨晕染背景效果 ==================== */
+
+.tcm-ink-wash-bg {
+  position: relative;
+  background: var(--tcm-bg-ink-wash);
+}
+
+.tcm-ink-wash-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(ellipse at 20% 30%, rgba(139, 69, 19, 0.03) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 70%, rgba(47, 79, 79, 0.03) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* ==================== 工具类 ==================== */
+
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.mt-0 { margin-top: 0; }
+.mt-8 { margin-top: 8px; }
+.mt-16 { margin-top: 16px; }
+.mt-24 { margin-top: 24px; }
+
+.mb-0 { margin-bottom: 0; }
+.mb-8 { margin-bottom: 8px; }
+.mb-16 { margin-bottom: 16px; }
+.mb-24 { margin-bottom: 24px; }
+
+.ml-8 { margin-left: 8px; }
+.ml-16 { margin-left: 16px; }
+
+.mr-8 { margin-right: 8px; }
+.mr-16 { margin-right: 16px; }
+
+.p-16 { padding: 16px; }
+.p-20 { padding: 20px; }
+.p-24 { padding: 24px; }
+
+.flex { display: flex; }
+.flex-center { display: flex; align-items: center; justify-content: center; }
+.flex-between { display: flex; align-items: center; justify-content: space-between; }
+.flex-wrap { flex-wrap: wrap; }
+.gap-8 { gap: 8px; }
+.gap-16 { gap: 16px; }

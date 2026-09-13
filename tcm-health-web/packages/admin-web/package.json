@@ -1,0 +1,26 @@
+{
+  "name": "admin-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "中医养生平台 - 管理员端",
+  "author": "Ti",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@wangeditor/editor": "^5.1.23",
+    "@wangeditor/editor-for-vue": "^5.1.12",
+    "axios": "^1.6.5",
+    "echarts": "^5.4.3",
+    "element-plus": "^2.5.3",
+    "pinia": "^2.1.7",
+    "vue": "^3.4.15",
+    "vue-router": "^4.2.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.3",
+    "vite": "^5.0.12"
+  }
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tcm.mapper.ShoppingCartMapper">
+
+    <select id="selectCartList" resultType="com.tcm.model.vo.CartVO">
+        SELECT
+            sc.id,
+            sc.product_id,
+            p.name AS product_name,
+            p.main_image AS product_image,
+            p.price AS product_price,
+            sc.quantity,
+            sc.selected,
+            p.status AS product_status,
+            COALESCE(ps.stock, 0) AS stock,
+            (p.price * sc.quantity) AS total_price
+        FROM shopping_cart sc
+        LEFT JOIN product p ON sc.product_id = p.id AND p.deleted = 0
+        LEFT JOIN product_stock ps ON p.id = ps.product_id
+        WHERE sc.user_id = #{userId}
+        ORDER BY sc.create_time DESC
+    </select>
+
+</mapper>

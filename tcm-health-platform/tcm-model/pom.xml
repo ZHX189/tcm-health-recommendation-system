@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.tcm</groupId>
+        <artifactId>tcm-health-platform</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
+    <artifactId>tcm-model</artifactId>
+    <packaging>jar</packaging>
+    <name>tcm-model</name>
+    <description>实体模块 - Entity、DTO、VO、Query</description>
+
+    <dependencies>
+        <!-- Common -->
+        <dependency>
+            <groupId>com.tcm</groupId>
+            <artifactId>tcm-common</artifactId>
+        </dependency>
+
+        <!-- MyBatis Plus -->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-spring-boot3-starter</artifactId>
+        </dependency>
+
+        <!-- Lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+</project>

@@ -1,0 +1,9 @@
+target/
+.idea/
+*.iml
+.vscode/
+uploads/
+*.rar
+*.zip
+*.log
+HELP.md

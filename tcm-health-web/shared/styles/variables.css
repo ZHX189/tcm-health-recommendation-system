@@ -1,0 +1,121 @@
+/**
+ * 中医养生平台 - 中式主题样式变量
+ * 主题以大地色系（赭石、姜黄、水墨青）为主，营造宁静自然之感
+ * @author Ti
+ * @since 2026-02-03
+ */
+
+:root {
+  /* ==================== 大地色系主色调 ==================== */
+  
+  /* 赭石色 - 主色 */
+  --tcm-ochre: #8B4513;
+  --tcm-ochre-light: #A0522D;
+  --tcm-ochre-dark: #6B3410;
+  --tcm-ochre-50: rgba(139, 69, 19, 0.05);
+  --tcm-ochre-100: rgba(139, 69, 19, 0.1);
+  --tcm-ochre-200: rgba(139, 69, 19, 0.2);
+  
+  /* 姜黄色 - 辅助色 */
+  --tcm-turmeric: #D4A017;
+  --tcm-turmeric-light: #E6B422;
+  --tcm-turmeric-dark: #B8860B;
+  --tcm-turmeric-50: rgba(212, 160, 23, 0.05);
+  --tcm-turmeric-100: rgba(212, 160, 23, 0.1);
+  
+  /* 水墨青 - 点缀色 */
+  --tcm-ink-cyan: #2F4F4F;
+  --tcm-ink-cyan-light: #3D6363;
+  --tcm-ink-cyan-dark: #1F3333;
+  
+  /* 传统中式配色 */
+  --tcm-vermilion: #D14836;       /* 朱砂红 - 警示/危险 */
+  --tcm-jade: #2E8B57;            /* 玉绿 - 成功 */
+  --tcm-bamboo: #228B22;          /* 竹青 - 信息 */
+  --tcm-amber: #FFB90F;           /* 琥珀 - 警告 */
+  
+  /* ==================== 背景色系 ==================== */
+  
+  /* 宣纸色背景 */
+  --tcm-bg-paper: #FAF7F0;
+  --tcm-bg-paper-dark: #F5F0E6;
+  
+  /* 古典米白 */
+  --tcm-bg-cream: #FFFEF5;
+  --tcm-bg-light: #FEFCF7;
+  
+  /* 水墨渲染背景 */
+  --tcm-bg-ink-wash: linear-gradient(135deg, #FAF7F0 0%, #F0EDE4 50%, #E8E4DB 100%);
+  
+  /* ==================== 文字色系 ==================== */
+  
+  /* 主要文字 - 墨色 */
+  --tcm-text-primary: #2C2416;
+  --tcm-text-regular: #4A4036;
+  --tcm-text-secondary: #6B5E52;
+  --tcm-text-placeholder: #A69B8C;
+  --tcm-text-disabled: #C4B9AA;
+  
+  /* ==================== 边框色系 ==================== */
+  
+  --tcm-border-base: #D4C9B8;
+  --tcm-border-light: #E6DFD2;
+  --tcm-border-lighter: #F0EBE0;
+  --tcm-border-dark: #B8A990;
+  
+  /* ==================== 阴影效果 ==================== */
+  
+  --tcm-shadow-sm: 0 1px 2px rgba(44, 36, 22, 0.05);
+  --tcm-shadow-base: 0 2px 8px rgba(44, 36, 22, 0.08);
+  --tcm-shadow-md: 0 4px 16px rgba(44, 36, 22, 0.1);
+  --tcm-shadow-lg: 0 8px 24px rgba(44, 36, 22, 0.12);
+  --tcm-shadow-xl: 0 12px 32px rgba(44, 36, 22, 0.15);
+  
+  /* ==================== 圆角 ==================== */
+  
+  --tcm-radius-sm: 2px;
+  --tcm-radius-base: 4px;
+  --tcm-radius-md: 6px;
+  --tcm-radius-lg: 8px;
+  
+  /* ==================== 字体 ==================== */
+  
+  /* 标题使用宋体 */
+  --tcm-font-title: "SimSun", "STSong", "NSimSun", "Songti SC", serif;
+  /* 正文使用系统字体 */
+  --tcm-font-body: "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", "Source Han Sans CN", sans-serif;
+  
+  /* ==================== 过渡动画 ==================== */
+  
+  --tcm-transition-fast: 0.15s ease;
+  --tcm-transition-base: 0.25s ease;
+  --tcm-transition-slow: 0.35s ease;
+  
+  /* ==================== Element Plus 主题覆盖 ==================== */
+  
+  --el-color-primary: var(--tcm-ochre);
+  --el-color-primary-light-3: var(--tcm-ochre-light);
+  --el-color-primary-light-5: var(--tcm-ochre-200);
+  --el-color-primary-light-7: var(--tcm-ochre-100);
+  --el-color-primary-light-9: var(--tcm-ochre-50);
+  --el-color-primary-dark-2: var(--tcm-ochre-dark);
+  
+  --el-color-success: var(--tcm-jade);
+  --el-color-warning: var(--tcm-amber);
+  --el-color-danger: var(--tcm-vermilion);
+  --el-color-info: var(--tcm-ink-cyan);
+  
+  --el-bg-color: var(--tcm-bg-paper);
+  --el-bg-color-page: var(--tcm-bg-cream);
+  
+  --el-text-color-primary: var(--tcm-text-primary);
+  --el-text-color-regular: var(--tcm-text-regular);
+  --el-text-color-secondary: var(--tcm-text-secondary);
+  --el-text-color-placeholder: var(--tcm-text-placeholder);
+  
+  --el-border-color: var(--tcm-border-base);
+  --el-border-color-light: var(--tcm-border-light);
+  --el-border-color-lighter: var(--tcm-border-lighter);
+  
+  --el-font-family: var(--tcm-font-body);
+}

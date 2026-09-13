@@ -1,0 +1,8 @@
+packages:
+  - 'packages/*'
+  - 'shared'
+
+onlyBuiltDependencies:
+  - esbuild
+  - vue-demi
+  - es5-ext
